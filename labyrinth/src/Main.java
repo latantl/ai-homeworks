@@ -4,10 +4,6 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        readInput();
-    }
-
-    private static Maze readInput() {
         ArrayList<int[]> rows = new ArrayList<>();
         Scanner reader = new Scanner(System.in);
         while(reader.hasNextLine()) {
@@ -18,7 +14,7 @@ public class Main {
             rows.add(elems);
         }
         int n_of_items = rows.remove(rows.size() - 1)[0];
-        return new Maze(rows, n_of_items);
+        Maze.solve(rows, n_of_items);
     }
 
 }
