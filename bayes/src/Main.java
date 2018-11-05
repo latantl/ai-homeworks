@@ -19,8 +19,10 @@ public class Main {
             double n = 1;
             for (int word : words) {
                 Word a = searchAttribute(word);
-                p *= a.p();
-                n *= a.n();
+                if (a != null) {
+                    p *= a.p();
+                    n *= a.n();
+                }
             }
             System.out.println(p > n ? 1 : 0);
         }
